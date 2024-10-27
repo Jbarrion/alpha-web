@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>DASHBOARD</h1>
+        <div class="tabs">
+            <button class="tab active">Overview</button>
+            <button class="tab">Analytics</button>
+        </div>
+        <div class="metrics">
+            <div class="metric-card">
+                <span class="metric-text">Total Number of Cars:</span>
+                <span id="totalCars" class="metric-value red">324</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-text">Total Number of Emergency Vehicles:</span>
+                <span id="emergencyVehicles" class="metric-value red">121</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-text">Average Cars Per Day:</span>
+                <span id="averageCars" class="metric-value white">500</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-text">Additional Cars:</span>
+                <span id="extraCars" class="metric-value white">100</span>
+            </div>
+        </div>
+              
+        <div class="content">
+            <div class="chart-container">
+                <canvas id="dailyCarsChart"></canvas>
+            </div>
+            <div class="logs">
+                <h2>Logs</h2>
+                <!-- Future logs content here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
