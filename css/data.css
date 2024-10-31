@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard {
+    width: 100vw;
+    max-width: 2000px;
+    padding: 2vw;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: left;
+    font-size: 2.8em;
+    margin-bottom: .5em;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+
+}
+
+.tab {
+    padding: 0.5em 1em;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.tab:not(.active) {
+    background-color: black;
+    color: #555;
+}
+
+.tab.active {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* Metrics Cards */
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.metric-card {
+    background-color: #1B1B1D;
+    padding: 2em;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+.metric-text {
+    font-family: 'GeistMono', monospace;
+    font-size: 0.9em;
+    color: white;
+    display: block;
+}
+
+.metric-value {
+    font-size: 3em;
+    font-family: 'GeistMono', monospace;
+    display: block;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.red {
+    color: #e74c3c;
+}
+
+.white {
+    color: white;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+}
+
+/* Chart Container */
+.chart-container {
+    flex-grow: 1;
+    min-width: 60%;
+    height: 60vh;
+    padding: 1em;
+    background-color: #1B1B1D;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+/* Logs Container */
+.logs {
+    flex-grow: 1;
+    min-width: 35%;
+    height: 60vh;
+    padding: 1em;
+    background-color: #1B1B1D;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.logs h2 {
+    margin-bottom: 0.5em;
+}
+
+/* Ensure Chart Fills Container */
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.log{
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1em;
+    font-size: 0.9em;
+    color: white;
+    margin-bottom: 0.5em;
+}
