@@ -10,21 +10,23 @@ body {
     color: #fff;
     background-color: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center all content */
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0; /* Remove default margins */
 }
-
 
 .top-menu {
     font-family: 'GeistMono', monospace;
     width: 100%;
     text-align: right;
-    position: fixed;
+    position: fixed; /* Keep top menu fixed */
     top: 10px;
     right: 0;
     padding: 25px 15px;
     z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent for visibility */
 }
 
 nav {
@@ -45,16 +47,14 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     padding: 5px 15px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
     transition: border 0.3s ease-in-out;
-    border: 2px solid rgba(255, 255, 255, 0);
 }
 
 nav ul li a:hover {
     border: 2px solid rgba(255, 255, 255, 0.5);
-    }
-
+}
 
 .active {
     background-color: #D71921;
