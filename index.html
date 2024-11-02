@@ -17,7 +17,6 @@
         </nav>
     </header>
     
-    <!-- First Section with Default Background -->
     <section class="default-bg">
         <div class="app-name">Alert V2</div>
         <p class="description">Alert is something that you see in your eyes</p>
@@ -28,7 +27,6 @@
         </div>
     </section>
 
-    <!-- Second Section with Gallery -->
     <section class="custom-bg">
         <div class="info-container">
             <h1>Information</h1>
@@ -49,30 +47,38 @@
             </div>
         </div>
     </section>
-    <!-- Live Data Section -->
+
     <section class="live">
         <div class="live-info">
-
             <div class="live-data">
                 <div class="data-item">
-                    <h2 class="big-number">20</h2>
+                    <h2 id="carCount" class="big-number"></h2>
                     <p class="description">Count of Cars Today</p>
                 </div>
                 <div class="data-item">
-                    <h2 class="big-number">50</h2>
+                    <h2 id="emergencyCount" class="big-number"></h2>
                     <p class="description">Count of Emergency Vehicles Today</p>
                 </div>
                 <div class="data-item">
-                    <h2 class="big-number">15</h2>
+                    <h2 id="alertCount" class="big-number"></h2>
                     <p class="description">Count of Alerts Today</p>
                 </div>
                 <div class="data-item">
-                    <h2 class="big-number">5</h2>
+                    <h2 id="responseTime" class="big-number"></h2>
                     <p class="description">Average Response Time (min)</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        // Function to generate random numbers and display them in the live data section
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('carCount').textContent = Math.floor(Math.random() * 100) + 1; // Random between 1-100
+            document.getElementById('emergencyCount').textContent = Math.floor(Math.random() * 50) + 1; // Random between 1-50
+            document.getElementById('alertCount').textContent = Math.floor(Math.random() * 30) + 1; // Random between 1-30
+            document.getElementById('responseTime').textContent = (Math.random() * 10).toFixed(1); // Random float between 0.0-10.0
+        });
+    </script>
 </body>
 </html>
