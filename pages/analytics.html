@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Analytics</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/data.css">
+    <link rel="stylesheet" href="../css/analytics.css">
 </head>
 <body>
     <header class="top-menu">
@@ -20,16 +20,16 @@
     </header>
     <div class="dashboard">
         <a href="/" style="text-decoration: none; color: inherit;">
-            <h1>DASHBOARD</h1>
+            <h1>ANALYTICS</h1>
         </a>
         
         <div class="tabs">
             <!-- Changed to anchor tags to navigate properly -->
             <a href="data.html">
-                <button class="tab active">Overview</button>
+                <button class="tab">Overview</button>
             </a>
             <a href="analytics.html">
-                <button class="tab">Analytics</button>
+                <button class="tab active">Analytics</button>
             </a>
         </div>
         <div class="metrics">
@@ -52,9 +52,8 @@
         </div>
 
         <div class="content">
-            <div class="chart-container">
-                <canvas id="dailyCarsChart"></canvas>
-            </div>
+            <!-- Empty container replacing the graph -->
+            <div class="chart-container" id="analyticsContainer"></div>
             <div class="logs">
                 <h2>Logs</h2>
                 <div class="log">
@@ -64,7 +63,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/main.js"></script>
     <script>
         // Function to generate random data for metrics
