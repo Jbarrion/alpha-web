@@ -1,9 +1,11 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Dashboard Layout */
 .dashboard {
     width: 100vw;
     max-width: 2000px;
@@ -13,10 +15,11 @@
     border-radius: 8px;
 }
 
+/* Main Heading */
 h1 {
     text-align: left;
     font-size: 2.8em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 
 /* Tabs */
@@ -89,7 +92,8 @@ h1 {
 .content {
     display: flex;
     gap: 1em;
-    width: 106.9%;
+    width: 100%;
+    justify-content: center; /* Center the content */
 }
 
 /* Chart Container */
@@ -124,6 +128,7 @@ canvas {
     height: 100% !important;
 }
 
+/* Log Item */
 .log {
     border: 1px solid #333;
     border-radius: 8px;
