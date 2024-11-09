@@ -92,7 +92,7 @@ h1 {
 .content {
     display: flex;
     gap: 1em;
-    width: 100%;
+    width: 106.8%;
     justify-content: center; /* Center the content */
 }
 
