@@ -142,6 +142,7 @@ body {
     overflow-x: hidden; /* for hidden scrollbar*/
 }
 
+/*called here because of the changin layout, need to tweak manually*/
 .top-menu {
     font-family: 'GeistMono', monospace;
     width: 100%;
