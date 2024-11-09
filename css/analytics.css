@@ -137,3 +137,19 @@ canvas {
     color: white;
     margin-bottom: 0.5em;
 }
+
+body {
+    overflow-x: hidden; /* for hidden scrollbar*/
+}
+
+.top-menu {
+    font-family: 'GeistMono', monospace;
+    width: 100%;
+    text-align: right;
+    position: fixed; /* Keep top menu fixed */
+    top: 4.5px; /* Adjusted top position to match index.css */
+    right: 0;
+    padding: 25px 32px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent for visibility */
+}
