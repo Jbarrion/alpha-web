@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 2000px;
+    justify-content: space-between;
+}
+
+.video-feed {
+    flex: 1;
+    margin-right: 20px;
+    position: relative;
+}
+
+.video-feed h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.video-feed img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.log-section {
+    width: 35%;
+    background-color: #1B1B1D;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 60vh;
+    border: 1px solid #333;
+}
+
+.log-section h2 { /* Updated margin for log-section */
+    margin: 0.2em 0 0.5em; /* Adjusted top margin */
+}
+
+.logs {
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1em;
+    font-size: 0.9em;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.logs p {
+    margin: 5px 0;
+}
+
+.log-time {
+    font-family: 'GeistMono', monospace;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.log-entry {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 2000px;
+}
+
+.time-container {
+    width: 100%;
+    text-align: center;
+    background-color: #1B1B1D;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'GeistMono', monospace;
+    font-size: 1.0em;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
