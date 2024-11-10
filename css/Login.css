@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-section {
+    background-color: #4f4f4f; /* Dark gray background */
+    color: #ffffff;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-section h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    width: 80%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.login-button {
+    padding: 10px;
+    background-color: #ff0000; /* Bright red color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signup-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.signup-text a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.brand-section {
+    background-color: #000000; /* Black background */
+    color: #ffffff;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-section h1 {
+    font-size: 48px;
+}
