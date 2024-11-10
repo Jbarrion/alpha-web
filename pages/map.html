@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        /* Optional: Customize the map container for a minimalistic look */
+        #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Customize the popup style */
+        .leaflet-popup-content-wrapper {
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .leaflet-popup-tip {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-menu">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="data.html">Dashboard</a></li>
+                <li><a class="active" href="feed.html">Live Feed</a></li>
+                <li><a class="logout" href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Live Time Container at the top -->
+        <div class="time-container">
+            <h1 id="liveTime">Loading...</h1>
+        </div>
+
+        <!-- Content container for Map and Logs -->
+        <div class="content">
+            <div class="video-feed">
+                <h1>Live Map</h1>
+                <div id="map"></div>
+            </div>
+            <div class="log-section">
+                <h2>Logs</h2>
+                <div class="logs">
+                    <div>
+                        <span class="log-time">12:00 PM</span>
+                        <div class="log-entry">
+                            <span class="log-text">Emergency Vehicle Detected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        function updateLiveTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit',
+                timeZone: 'Asia/Manila',
+                hour12: true
+            };
+            const formattedTime = new Intl.DateTimeFormat('en-PH', options).format(now);
+            document.getElementById("liveTime").innerText = formattedTime;
+        }
+
+        setInterval(updateLiveTime, 1000); // Update every second
+        updateLiveTime(); // Initial call to display immediately
+
+        // Initialize the Leaflet map with CartoDB Dark Matter tiles
+        const map = L.map('map').setView([13.9433, 121.1350], 15); // Centered on the Feed 1 location
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+        }).addTo(map);
+
+        // Add a marker for "Feed 1"
+        const marker = L.marker([13.9433, 121.1350]).addTo(map)
+            .bindPopup('<b>Feed 1</b>')
+            .openPopup();
+    </script>
+</body>
+</html>
